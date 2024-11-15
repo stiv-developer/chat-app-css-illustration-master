@@ -1,0 +1,397 @@
+:root {
+
+    /* #### Text */
+
+    --Pale-Violet-sub-heading-at-the-top-of-the-app-UI: hsl(276, 100%, 81%);
+    --Moderate-Violet-chat-on-the-left: hsl(276, 55%, 52%);
+    --Desaturated-Dark-Violet-chat-on-the-right: hsl(271, 15%, 43%);
+    --Grayish-Blue-placeholder-text: hsl(206, 6%, 79%);
+    --Very-Dark-Desaturated-Violet-main-heading: hsl(271, 36%, 24%);
+    --Dark-Grayish-Violet-paragraph: hsl(270, 7%, 64%);
+
+    /* #### Gradients */
+
+    /* These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient: */
+
+    --Light-Magenta: hsl(293, 100%, 63%);
+    --Light-Violet: hsl(264, 100%, 61%);
+
+    /* ### Secondary */
+
+    --White: hsl(0, 0%, 100%);
+    --Light-Grayish-Violet-app-background: hsl(270, 20%, 96%);
+    --Very-Dark-Desaturated-Violet-submit-button-background: hsl(271, 36%, 24%);
+    --Very-Light-Magenta-radio-button-outline: hsl(289, 100%, 72%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Rubik", sans-serif;
+    font-style: normal;
+    position: relative;
+}
+
+/* BACKGROUND  */
+.bg-container {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.bg-container .bg-img {
+    background-image: linear-gradient(var(--Light-Magenta), var(--Light-Violet));
+    width: 200px;
+    height: 500px;
+    border-radius: 0px 0px 200px 0px;
+}
+
+.bg-container-second {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    right: 0;
+}
+
+.bg-container-second .bg-img-second {
+    background-color: var(--Light-Grayish-Violet-app-background);
+    width: 200px;
+    height: 530px;
+    border-radius: 200px 0px 0px 0px;
+}
+
+/* CONTAINER  */
+
+.container {
+    padding: 30px 25px;
+}
+
+/* SECTION  */
+
+.section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*_________CARD__________  */
+
+.section-header .card {
+    background-color: white;
+    /* border: 1px solid red; */
+    width: 250px;
+    border-radius: 25px;
+    padding: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/*_________CARD HEADER____________  */
+
+.section-header .card .card-header {
+    padding-top: 30px;
+    background-image: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    border-radius: 20px 20px 6px 6px;
+}
+
+.section-header .card .card-header {
+    position: relative;
+}
+
+.section-header .card .card-header .bg-white {
+    width: 150px;
+    height: 15px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.section-header .card .card-header .card-header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.section-header .card .card-header .card-header-container span {
+    color: white;
+}
+
+.section-header .card .card-header .card-header-container .group-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.section-header .card .card-header .card-header-container .group-info img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-left: 5px;
+}
+
+.section-header .card .card-header .card-header-container .group-info .group-name {
+    display: flex;
+    flex-direction: column;
+    padding-left: 8px;
+}
+
+.section-header .card .card-header .card-header-container .group-info .group-name .name {
+    color: white;
+    font-size: 0.8rem;
+}
+
+.section-header .card .card-header .card-header-container .group-info .group-name .status {
+    color: var(--Pale-Violet-sub-heading-at-the-top-of-the-app-UI);
+    font-size: 0.6rem;
+}
+
+/*_________CARD BODY____________  */
+
+.section-header .card .card-body {
+    padding: 10px 10px;
+    /* background-color: rgba(251, 250, 250, 0.518); */
+    background-color: var(--Light-Grayish-Violet-app-background);
+}
+
+.section-header .card .card-body .message-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.section-header .card .card-body .message-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.section-header .card .card-body .message {
+    background-color: #EEE4F5;
+    margin-bottom: 10px;
+    padding: 10px;
+    /* width: 150px; */
+    max-width: 130px;
+    border-radius: 10px;
+}
+
+.section-header .card .card-body .message-right .message {
+    background: var(--White);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    /* max-width: 160px ; */
+}
+
+.section-header .card .card-body .message.special {
+    background-image: linear-gradient(to right, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px 10px 10px 5px;
+    width: 230px !important;
+}
+
+.section-header .card .card-body .message.special .group-minutes {
+    display: flex;
+    flex-direction: row;
+    column-gap: 8px;
+    align-items: center;
+}
+
+.section-header .card .card-body .message.special .group-minutes .circle-icon {
+    width: 15px;
+    height: 15px;
+    border: 0.5px solid var(--White);
+    border-radius: 50%;
+}
+
+.section-header .card .card-body .message-left .message.special .group-minutes p {
+    color: var(--White);
+    font-size: 0.6rem;
+    /* border: 1px solid red; */
+}
+
+.section-header .card .card-body .message.special span {
+    color: var(--White);
+    font-weight: 500;
+    padding-right: 5px;
+    font-size: 0.9rem;
+}
+
+.section-header .card .card-body .message p {
+    color: var(--Moderate-Violet-chat-on-the-left);
+    font-size: 0.6rem;
+    margin: 0;
+}
+
+.section-header .card .card-body .message-right .message p {
+    /* border: 1px solid red; */
+    color: var(--Very-Dark-Desaturated-Violet-main-heading);
+}
+
+.section-header .card .card-body .message.none {
+    background-color: var(--Light-Grayish-Violet-app-background);
+    padding: 0;
+    padding-top: 5px;
+    box-shadow: none;
+    margin-right: 10px;
+}
+
+.section-header .card .card-body .message .img-group {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+}
+
+.section-header .card .card-body .message .img-group img {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+/* FOOTER CARD  */
+
+.card-footer {
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 2px;
+    background-color: var(--Light-Grayish-Violet-app-background);
+    border-radius: 0px 0px 20px 20px;
+}
+
+.card-footer .form {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    border-radius: 100px;
+    background-color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.card-footer .form input {
+    width: 100%;
+    border: 0;
+    padding-left: 16px;
+    outline: none;
+}
+
+.card-footer .form button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    background-color: var(--Very-Dark-Desaturated-Violet-submit-button-background);
+}
+
+.card-footer .form button i {
+    color: var(--White);
+}
+
+
+/* SECTION BODY  */
+
+.section-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.section-body h1 {
+    color: var(--Very-Dark-Desaturated-Violet-main-heading);
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.section-body p {
+    margin-top: 0;
+    color: var(--Dark-Grayish-Violet-paragraph);
+    text-align: center;
+    line-height: 30px;
+    font-size: .9rem;
+    width: 280px;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (min-width: 1000px) {
+
+    body {
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* BACKGROUND  */
+
+    .bg-container{
+        left: -100px;
+    }
+    
+    .bg-container .bg-img {
+        width: 30vw;
+        height: 80vh;
+        border-radius: 0px 0px 270px 250px;
+    }
+
+    .bg-container-second{
+        right: -100px;
+    }
+
+    .bg-container-second .bg-img-second {
+        background-color: var(--Light-Grayish-Violet-app-background);
+        width: 30vw;
+        height: 80vh;
+        border-radius: 250px 250px 0px 0px;
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: row;
+        column-gap: 20px;
+    }
+
+    .section-header {
+        width: 250px;
+        margin: 0 100px;
+    }
+
+    .section-body{
+        align-items: start;
+    }
+
+    .section-body h1{
+        text-align: start;
+    }
+
+    .section-body p{
+        text-align: start;
+        font-size: 1rem;
+        width: 400px;
+    }
+}
